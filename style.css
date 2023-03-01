@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2em;
+    background-color: #bcf8b3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.palette button {
+    top: -1em;
+    left: 50%;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.7em 2em;
+    font-size: 1.1em;
+    position: absolute;
+    font-weight: 500;
+    transition: 0.4s;
+    border-radius: 2em;
+    letter-spacing: 2px;
+    background-color: #0e7e17;
+    transform: translateX(-50%);
+}
+
+.palette button:hover {
+    color: #1f1f1f;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.palette {
+    width: 55em;
+    height: 15em;
+    padding-top: 5em;
+    color: #1f1f1f;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.colors {
+    height: 100%;
+    display: flex;
+    overflow-y: hidden;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.colors h4 {
+ font-size: 0.9em;   
+}
+
+.colors > div {
+    width: 100%;
+}
+
+.color {
+    width: 80%;
+    height: 05em;
+    /* background-color: #ccc; */
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in;
+}
+
+@media screen and (max-width: 500px) {
+    body { padding: 2em; }
+    .palette { height: initial; }
+    .color { flex-direction: column; }
+    .colors > div { width: 20%; }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
